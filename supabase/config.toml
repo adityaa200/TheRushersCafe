@@ -1,0 +1,7 @@
+[functions.create-razorpay-order]
+verify_jwt = false
+entrypoint = "./functions/create-razorpay-order/index.ts"
+
+[functions.verify-razorpay-payment]
+verify_jwt = false
+entrypoint = "./functions/verify-razorpay-payment/index.ts"
