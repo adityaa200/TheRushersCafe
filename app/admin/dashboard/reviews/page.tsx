@@ -49,7 +49,7 @@ export default function AdminReviewsPage() {
               <div>
                 <h3 className="text-sm font-semibold text-foreground">{r.name}</h3>
                 <div className="mt-1 flex gap-0.5">
-                  {Array.from({length: 5}).map((_, i) => <Star key={i} className={`h-3.5 w-3.5 ${i < r.rating ? 'fill-gold text-gold' : 'text-muted'}`} />)}
+                  {Array.from({length: 5}).map((_, i) => <Star key={i} className={`h-3.5 w-3.5 ${i < r.rating ? 'fill-gold text-gold' : 'text-muted-foreground'}`} />)}
                 </div>
               </div>
               <button onClick={() => handleDelete(r.id)} className="text-muted-foreground hover:text-destructive"><Trash2 className="h-4 w-4" /></button>

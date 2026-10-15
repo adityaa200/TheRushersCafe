@@ -22,7 +22,8 @@ export default function AdminSeoPage() {
   const handleSave = async () => {
     if (!seo) return;
     setSaving(true);
-    const ok = await adminUpdateSeo(seo.id, seo);
+    const { id, ...rest } = seo;
+    const ok = await adminUpdateSeo(id, rest);
     setSaving(false);
     if (ok) toast.success('SEO settings saved'); else toast.error('Failed');
   };

@@ -22,7 +22,8 @@ export default function AdminSettingsPage() {
   const handleSave = async () => {
     if (!settings) return;
     setSaving(true);
-    const ok = await adminUpdateSettings(settings.id, settings);
+    const { id, ...rest } = settings;
+    const ok = await adminUpdateSettings(id, rest);
     setSaving(false);
     if (ok) toast.success('Settings saved'); else toast.error('Failed to save');
   };

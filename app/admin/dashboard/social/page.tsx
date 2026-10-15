@@ -25,6 +25,7 @@ export default function AdminSocialPage() {
   };
 
   const handleDelete = async (id: string) => {
+    if (!confirm('Delete this social link?')) return;
     const ok = await adminDeleteSocialLink(id);
     if (ok) { toast.success('Deleted'); load(); } else toast.error('Failed');
   };
